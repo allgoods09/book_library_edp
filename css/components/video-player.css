@@ -7,14 +7,20 @@
 .video-status { color: var(--clr-muted); font-style: italic; margin-bottom: 0.5rem; }
 .video-book-title { font-family: var(--font-heading); color: var(--clr-gold); font-size: 1.1rem; }
 
-/* 16:9 responsive wrapper */
+/* Outer wrapper controls the width */
 .video-embed-wrapper {
-  position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 = 9/16 = 56.25% */
+  max-width: 720px;
+  margin: 0 auto;
 }
 
-.video-embed-wrapper iframe {
+/* Inner wrapper maintains 16:9 */
+.video-ratio-box {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.video-ratio-box iframe {
   position: absolute;
   inset: 0;
   width: 100%;

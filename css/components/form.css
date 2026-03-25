@@ -23,6 +23,10 @@ textarea { resize: vertical; min-height: 130px; }
   padding: 100px 6%;
 }
 
+.contact-section.light-bg {
+  background: var(--clr-surface);
+}
+
 .contact-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;

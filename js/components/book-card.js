@@ -91,11 +91,16 @@ function renderBooks(books) {
     // "Watch Review" — swap video source and scroll to player
     card.querySelector('.watch-review-btn').addEventListener('click', () => {
       const iframe = document.getElementById('review-video');
-      const videoId = book.video.split('/embed/')[1]; // extract ID from URL
+      const reviewSection = document.getElementById('reviews');
+
+      // Show the section if it's hidden
+      reviewSection.style.display = 'block';
+      syncContactBg();
+
       iframe.src = book.video + '?autoplay=1&enablejsapi=1';
       document.getElementById('video-book-title').textContent = `Now reviewing: ${book.title}`;
-      document.getElementById('reviews').scrollIntoView({ behavior: 'smooth' });
-      attachYouTubeEvents(videoId); // hook play/pause/ended events
+      reviewSection.scrollIntoView({ behavior: 'smooth' });
+      attachYouTubeEvents(book.video.split('/embed/')[1]);
     });
 
     bookGrid.appendChild(card);
