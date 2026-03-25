@@ -1,0 +1,27 @@
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap');
+
+:root {
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body:    'Inter', sans-serif;
+  --clr-bg:       #0f0e0c;
+  --clr-surface:  #1a1814;
+  --clr-gold:     #c9a84c;
+  --clr-cream:    #f5efe0;
+  --clr-muted:    #7a6f5e;
+  --clr-accent:   #8b3a3a;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--clr-bg);
+  color: var(--clr-cream);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--clr-gold);
+  line-height: 1.2;
+}

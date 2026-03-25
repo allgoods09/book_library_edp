@@ -1,0 +1,11 @@
+/* Responsive Design (5 pts) */
+@media (max-width: 768px) {
+  .book-grid { grid-template-columns: repeat(2, 1fr); }
+  .nav-links { display: none; }
+  .video-wrapper { flex-direction: column; }
+}
+
+@media (max-width: 480px) {
+  .book-grid { grid-template-columns: 1fr; }
+  h1 { font-size: 2rem; }
+}

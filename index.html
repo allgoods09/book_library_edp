@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Library – Search & Video Reviews</title>
+
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/components/navbar.css" />
+  <link rel="stylesheet" href="css/components/sidebar.css" />
+  <link rel="stylesheet" href="css/components/buttons.css" />
+  <link rel="stylesheet" href="css/components/search-form.css" />
+  <link rel="stylesheet" href="css/components/book-card.css" />
+  <link rel="stylesheet" href="css/components/video-player.css" />
+  <link rel="stylesheet" href="css/components/form.css" />
+  <link rel="stylesheet" href="css/effects/parallax.css" />
+  <link rel="stylesheet" href="css/effects/animations.css" />
+</head>
+<body>
+
+  <!-- ── Sidebar: Genre Filter Navigation (10 pts) ── -->
+  <aside id="sidebar" class="sidebar" aria-hidden="true">
+    <button id="sidebar-close-btn" aria-label="Close sidebar">✕</button>
+    <h2 class="sidebar-title">Browse Genres</h2>
+    <ul class="genre-list">
+      <li><a href="#" data-genre="all">📚 All Books</a></li>
+      <li><a href="#" data-genre="fiction">📖 Fiction</a></li>
+      <li><a href="#" data-genre="non-fiction">🧠 Non-Fiction</a></li>
+      <li><a href="#" data-genre="mystery">🔍 Mystery</a></li>
+      <li><a href="#" data-genre="sci-fi">🚀 Sci-Fi</a></li>
+      <li><a href="#" data-genre="romance">💛 Romance</a></li>
+      <li><a href="#" data-genre="horror">👻 Horror</a></li>
+    </ul>
+  </aside>
+
+  <!-- ── Navbar ── -->
+  <header id="navbar" class="navbar">
+    <button id="sidebar-open-btn" aria-label="Open genre filter">☰</button>
+    <a href="#" class="logo">📚 BookLib</a>
+    <nav class="nav-links">
+      <a href="#books">Books</a>
+      <a href="#reviews">Video Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ── Hero / Parallax Section (10 pts) ── -->
+  <section id="hero" class="parallax-section">
+    <div class="parallax-bg" data-parallax-speed="0.4"></div>
+    <div class="hero-content">
+      <h1>Discover Your Next<br/>Favourite Book</h1>
+      <p>Search thousands of titles. Watch video reviews. Read more.</p>
+      <!-- Hover Event (5 pts) on CTA -->
+      <button id="explore-btn" class="btn btn-primary" href="#books" >Explore Library</button>
+    </div>
+  </section>
+
+  <!-- ── Search Section (Form Submission Event – 5 pts) ── -->
+  <section id="search-section" class="search-section">
+    <h2>Search Books</h2>
+    <div id="search-form-container">
+      <!-- Form is built dynamically in js/components/search-form.js -->
+    </div>
+    <p id="search-message" class="form-message"></p>
+  </section>
+
+  <!-- ── Book Cards (Scroll Reveal – 5 pts) ── -->
+  <section id="books" class="books-section">
+    <h2>Library Collection</h2>
+    <div id="book-grid" class="book-grid">
+      <!-- Cards injected by js/components/book-card.js -->
+    </div>
+  </section>
+
+  <!-- ── Video Reviews Section (Video Events – 5 pts) ── -->
+  <section id="reviews" class="video-section">
+    <h2>Video Reviews</h2>
+    <div class="video-wrapper">
+      <div class="video-embed-wrapper">
+        <iframe
+          id="review-video"
+          src=""
+          title="Book Review"
+          frameborder="0"
+          allowfullscreen
+          allow="autoplay; encrypted-media"
+        ></iframe>
+      </div>
+      <div class="video-info">
+        <p id="video-status" class="video-status">Press play to start the review.</p>
+        <p id="video-book-title" class="video-book-title"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact Section ── -->
+<section id="contact" class="contact-section scroll-section">
+  <div class="contact-inner">
+
+    <!-- Left: Info + Newsletter -->
+    <div class="contact-left scroll-reveal">
+      <h2>Get In Touch</h2>
+      <p class="contact-tagline">Have a recommendation or just want to say hi? We'd love to hear from you.</p>
+
+      <ul class="contact-details">
+        <li>
+          <span class="contact-icon">✉</span>
+          <span>booklib@gmail.com</span>
+        </li>
+        <li>
+          <span class="contact-icon">📞</span>
+          <span>+63 912 345 6789</span>
+        </li>
+        <li>
+          <span class="contact-icon">📍</span>
+          <span>123 Rizal St., Cebu City</span>
+        </li>
+      </ul>
+
+      <div class="newsletter-box">
+        <p class="newsletter-label">Subscribe for new arrivals & review videos</p>
+        <div id="newsletter-container"></div>
+        <p id="newsletter-message" class="form-message"></p>
+      </div>
+    </div>
+
+    <!-- Right: Contact Form -->
+    <div class="contact-right scroll-reveal">
+      <h3>Send a Message</h3>
+      <div id="contact-form-container"></div>
+      <p id="contact-form-message" class="form-message"></p>
+    </div>
+
+  </div>
+</section>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <p>© 2026 BookLib. – Algodon Ltd.</p>
+  </footer>
+
+  <!-- Scripts (order matters) -->
+  <script src="js/utils/helpers.js"></script>
+  <script src="js/data/books.js"></script>
+  <script src="js/events/pageLoad.js"></script>
+  <script src="js/events/scroll.js"></script>
+  <script src="js/events/keyboard.js"></script>
+  <script src="js/events/resize.js"></script>
+  <script src="js/events/hover.js"></script>
+  <script src="js/events/video.js"></script>
+  <script src="js/components/sidebar.js"></script>
+  <script src="js/components/search-form.js"></script>
+  <script src="js/components/book-card.js"></script>
+  <script src="js/components/video-player.js"></script>
+  <script src="js/components/form.js"></script>
+  <script src="js/effects/parallax.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

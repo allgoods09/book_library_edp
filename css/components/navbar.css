@@ -1,0 +1,14 @@
+/* Navbar */
+.navbar {
+  position: sticky; top: 0; z-index: 500;
+  display: flex; align-items: center; gap: 1.5rem;
+  padding: 1rem 6%;
+  background: rgba(15,14,12,0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+}
+.logo { font-family: var(--font-heading); font-size: 1.4rem; color: var(--clr-gold); }
+.nav-links { margin-left: auto; display: flex; gap: 2rem; }
+.nav-links a { color: var(--clr-cream); font-size: 0.9rem; transition: color 0.2s; }
+.nav-links a:hover { color: var(--clr-gold); }
+#sidebar-open-btn { background: none; border: none; color: var(--clr-cream); font-size: 1.4rem; cursor: pointer; }

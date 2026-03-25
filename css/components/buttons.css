@@ -1,0 +1,17 @@
+/* Buttons & Hover Event (5 pts) */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border: none; border-radius: 3px;
+  font-family: var(--font-body); font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.btn-primary {
+  background: var(--clr-gold); color: #0f0e0c; font-weight: 600;
+}
+.btn-primary:hover {
+  background: #e0bb65;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201,168,76,0.3);
+}

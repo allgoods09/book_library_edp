@@ -1,0 +1,21 @@
+/* Sidebar – Genre Filter (10 pts) */
+.sidebar {
+  position: fixed; top: 0; left: -300px;
+  width: 300px; height: 100%;
+  background: var(--clr-surface);
+  border-right: 1px solid rgba(201,168,76,0.2);
+  z-index: 1000;
+  padding: 2rem 1.5rem;
+  transition: left 0.35s cubic-bezier(0.4,0,0.2,1);
+  overflow-y: auto;
+}
+.sidebar.open { left: 0; }
+.sidebar-title { font-size: 1.1rem; color: var(--clr-gold); margin-bottom: 1.5rem; }
+.genre-list li { margin-bottom: 0.75rem; }
+.genre-list a { color: var(--clr-cream); font-size: 0.95rem; transition: color 0.2s; }
+.genre-list a:hover,
+.genre-list a.active { color: var(--clr-gold); }
+#sidebar-close-btn {
+  background: none; border: none; color: var(--clr-muted);
+  font-size: 1.3rem; cursor: pointer; margin-bottom: 1rem; display: block;
+}

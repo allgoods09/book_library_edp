@@ -1,0 +1,21 @@
+/* Scroll-Reveal Animations (5 pts) */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered book card reveal */
+.book-card {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.book-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

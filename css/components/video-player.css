@@ -1,0 +1,23 @@
+/* Video Player – Book Reviews (5 pts) */
+.video-section { background: var(--clr-surface); }
+.video-section h2 { margin-bottom: 2rem; }
+.video-wrapper { display: flex; gap: 2rem; align-items: flex-start; }
+#review-video { border-radius: 6px; flex: 1; background: #000; }
+.video-info { flex: 0 0 240px; }
+.video-status { color: var(--clr-muted); font-style: italic; margin-bottom: 0.5rem; }
+.video-book-title { font-family: var(--font-heading); color: var(--clr-gold); font-size: 1.1rem; }
+
+/* 16:9 responsive wrapper */
+.video-embed-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 = 9/16 = 56.25% */
+}
+
+.video-embed-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
