@@ -23,6 +23,8 @@ document.addEventListener('click', (e) => {
 
 // Genre filter links
 document.querySelectorAll('.genre-list a').forEach(link => {
+  const bookSection = document.getElementById('search-section');
+  bookSection.style.display = 'block';
   link.addEventListener('click', (e) => {
     e.preventDefault();
     document.querySelectorAll('.genre-list a').forEach(l => l.classList.remove('active'));
@@ -31,6 +33,7 @@ document.querySelectorAll('.genre-list a').forEach(link => {
     const genre = link.dataset.genre;
     const filtered = genre === 'all' ? BOOKS : BOOKS.filter(b => b.genre === genre);
     if (typeof renderBooks === 'function') renderBooks(filtered);
+    bookSection.scrollIntoView({ behavior: 'smooth' });
     closeSidebar();
   });
 });

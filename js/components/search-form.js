@@ -10,7 +10,7 @@ searchContainer.innerHTML = `
     <input
       type="text"
       id="book-search-input"
-      placeholder='Search by title or author… (Press "/" to focus)'
+      placeholder='Search by title or author'
       autocomplete="off"
     />
     <button type="submit" class="btn btn-primary">Search</button>
