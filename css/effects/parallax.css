@@ -7,7 +7,8 @@
 }
 .parallax-bg {
   position: absolute; inset: -40%;
-  background: url('../../assets/images/hero-library.jpg') center/cover no-repeat;
+  /* background: url('../../assets/images/hero-library.jpg') center/cover no-repeat; */
+  background: url('https://wallpaperaccess.com/full/2862102.jpg') center/cover no-repeat;
   will-change: transform;
   filter: brightness(0.35);
 }
